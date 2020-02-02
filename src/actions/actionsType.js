@@ -1,0 +1,29 @@
+// Departement's actions type
+export const ADD_DEPARTEMENT = "ADD_DEPARTEMENT"
+export const EDIT_DEPARTEMENT = "EDIT_DEPARTEMENT"
+export const FETCH_DEPARTEMENTS = "FETCH_DEPARTEMENTS"
+export const GET_DEPARTEMENTS = "GET_DEPARTEMENTS"
+export const POPULATE_DEPARTEMENTS = "POPULATE_DEPARTEMENTS"
+export const REMOVE_DEPARTEMENT = "REMOVE_DEPARTEMENT"
+
+// Proclaimer's actions type
+export const ADD_PROCLAIMER = "ADD_PROCLAIMER"
+export const EDIT_PROCLAIMER = "EDIT_PROCLAIMER"
+export const GET_PROCLAIMERS = "GET_PROCLAIMERS"
+export const GET_LIST_PROCLAIMER = "GET_LIST_PROCLAIMER"
+export const POPULATE_PROCLAIMER = "POPULATE_PROCLAIMER"
+export const REMOVE_PROCLAIMER = "REMOVE_PROCLAIMER"
+
+// List's actions type
+export const ADD_LIST = "ADD_LIST"
+export const EDIT_LIST = "EDIT_LIST"
+export const FETCH_LISTS = "FETCH_LISTS"
+export const GET_LISTS = "GET_LISTS"
+export const REMOVE_LIST = "REMOVE_LIST"
+
+// Schedule's actions type
+export const ADD_SCHEDULE = "ADD_SCHEDULE"
+export const EDIT_SCHEDULE = "EDIT_SCHEDULE"
+export const GET_SCHEDULE = "GET_SCHEDULE"
+export const GET_SCHEDULE_LIST = "GET_SCHEDULE_LIST"
+export const REMOVE_SCHEDULE = "REMOVE_SCHEDULE"

@@ -1,0 +1,37 @@
+.flex-container {
+  display: flex;
+  border: 5px solid black
+}
+
+.inline-flex {
+  display: inline-flex
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.direction-row {
+  flex-direction: row;
+}
+
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.direction-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-element {
+  padding: 5px;
+  background-color: #E53935
+}
+
+.flex-element:nth-child(2) {
+  background-color: #8E24AA;
+}
+
+.flex-element:nth-child(3) {
+  background-color: #3F51B5;
+}

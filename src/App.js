@@ -1,25 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Container } from 'semantic-ui-react'
+import Proclaimer from './components/proclaimer/Proclaimer';
+import AddDepartementForm from './components/AddDepartementForm';
+import Header from './components/Header';
+import Store from './context/Store';
+import reducer from "./reducers/reducer";
+import Dasboard from './containers/dashboard/Dashboard';
+import List from './components/List';
+
+
+
+const initialState = {
+  departements: [],
+  proclaimers: [],
+  lists: [],
+  schedules: [],
+  indexLastPers: []
+}
 
 function App() {
+  const store = useReducer(reducer, initialState)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Store.Provider value={store}>
+      <Router>
+        <Container>
+          
+          <Header />
+          
+          <Switch>
+            <Route path="/" exact>
+              <Dasboard />
+            </Route>
+
+            <Route path="/addUsers">
+              <Proclaimer />
+            </Route>
+
+            <Route path="/addDep">
+              <AddDepartementForm />
+              <List />
+            </Route>
+          </Switch>
+
+        </Container>
+      </Router>
+    </Store.Provider>
   );
 }
 
